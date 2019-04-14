@@ -29,6 +29,22 @@ public class Stock implements Serializable {
     @QuerySqlField(index = true)
     private Double yearlyLow;
 
+    public Stock() {
+    }
+
+    public Stock(Long id, String isin, String company, Double open, Double high, Double low, Double close, Long numberOfTrades, Double yearlyHigh, Double yearlyLow) {
+        this.id = id;
+        this.isin = isin;
+        this.company = company;
+        this.open = open;
+        this.high = high;
+        this.low = low;
+        this.close = close;
+        this.numberOfTrades = numberOfTrades;
+        this.yearlyHigh = yearlyHigh;
+        this.yearlyLow = yearlyLow;
+    }
+
     public Long getId() {
         return id;
     }
